@@ -43,6 +43,7 @@ syntax on
 " colorscheme wombat256
 " turn line numbers on
 set number
+set relativenumber
 " highlight matching braces
 set showmatch
 " intelligent comments
@@ -63,13 +64,13 @@ set t_Co=256
 syntax enable
 set background=dark
 "colorscheme gruvbox
+colorscheme railscasts
 if has("gui_running")
-  colorscheme railscasts
   set guifont=Monaco\ Regular\ 11
   set guioptions=i
   set mouse=c
 else
-  colorscheme desert
+  "colorscheme desert
 end
 
 map ; :
