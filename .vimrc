@@ -12,6 +12,7 @@ Plugin 'https://github.com/kien/ctrlp.vim.git'
 Plugin 'https://github.com/ervandew/supertab.git'
 Plugin 'https://github.com/tpope/vim-surround.git'
 Plugin 'jpo/vim-railscasts-theme'
+Plugin 'https://github.com/scrooloose/nerdtree.git'
 
 " Up to here
 call vundle#end()            " required
@@ -66,13 +67,16 @@ if has("gui_running")
   colorscheme railscasts
   set guifont=Monaco\ Regular\ 11
   set guioptions=i
+  set mouse=c
 else
   colorscheme desert
 end
 
 map ; :
+imap jj <C-[>
 
 
+map <C-n> :NERDTreeToggle<CR>
 " Disable the arrow keys
 
 noremap <Up> <NOP>
@@ -80,4 +84,3 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-imap jj <C-[>
