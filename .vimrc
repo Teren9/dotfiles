@@ -77,6 +77,7 @@ imap jj <C-[>
 
 
 map <C-n> :NERDTreeToggle<CR>
+
 " Disable the arrow keys
 
 noremap <Up> <NOP>
