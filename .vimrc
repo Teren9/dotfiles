@@ -17,6 +17,8 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'https://github.com/tpope/vim-rails.git'
 Plugin 'https://github.com/tpope/vim-bundler.git'
 Plugin 'https://github.com/tpope/vim-fugitive.git'
+Plugin 'vim-ruby/vim-ruby'
+"Plugin 'scrooloose/syntastic'
 
 
 
@@ -88,8 +90,6 @@ imap jj <C-[>
 " set statusline+=[%{strlen(&fenc)?&fenc:&enc}]
 " set statusline+=\ [line\ %l\/%L]          
 " set statusline+=%{rvm#statusline()}
-
-
 map <C-n> :NERDTreeToggle<CR>
 
 " Disable the arrow keys

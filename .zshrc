@@ -90,4 +90,5 @@ export PATH="$PATH:$HOME/.gem/ruby/2.3.0/bin"
 alias sites="cd ~/Projects/Sites"
 alias blog="cd ~/Projects/Sites/rails/blog"
 alias media="echo 'password is 151150' & ssh yoramfr@192.168.1.13"
+alias vi=vim
 
