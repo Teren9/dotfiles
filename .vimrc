@@ -16,6 +16,7 @@ Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'https://github.com/tpope/vim-rails.git'
 Plugin 'https://github.com/tpope/vim-bundler.git'
+Plugin 'https://github.com/tpope/vim-fugitive.git'
 
 
 
@@ -80,6 +81,13 @@ end
 
 map ; :
 imap jj <C-[>
+" Statusline
+
+" set statusline=%F%m%r%h%w\ 
+" set statusline+=%{fugitive#statusline()}\    
+" set statusline+=[%{strlen(&fenc)?&fenc:&enc}]
+" set statusline+=\ [line\ %l\/%L]          
+" set statusline+=%{rvm#statusline()}
 
 
 map <C-n> :NERDTreeToggle<CR>
