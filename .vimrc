@@ -13,6 +13,11 @@ Plugin 'https://github.com/ervandew/supertab.git'
 Plugin 'https://github.com/tpope/vim-surround.git'
 Plugin 'jpo/vim-railscasts-theme'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'https://github.com/tpope/vim-rails.git'
+Plugin 'https://github.com/tpope/vim-bundler.git'
+
+
 
 " Up to here
 call vundle#end()            " required
