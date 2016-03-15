@@ -269,6 +269,22 @@ bindsym $mod+Pause mode "$mode_system"
  bindsym XF86AudioNext exec playerctl next
  bindsym XF86AudioPrev exec playerctl previous
 
+#moving workspaces Left/Right
+
+# Use mod-Control-Up and Down to rotate through the workspace list.
+bindsym $mod+Control+Left workspace prev
+bindsym $mod+Control+Right workspace next
+bindsym $mod+Control+j workspace prev
+bindsym $mod+Control+k workspace next
+
+# Use mod-Shift-Control-Up and Down to move the selected window to an
+# adjacent workspace. (This does *not* change your view to that workspace,
+# it just "zaps" the window there.)
+bindsym $mod+Shift+Control+Left move workspace prev
+bindsym $mod+Shift+Control+Right move workspace next
+bindsym $mod+Shift+Control+j move workspace prev
+bindsym $mod+Shift+Control+k move workspace next
+
 #exec_always compton -bc -i 0.7 
 exec_always compton --config ~/.compton.conf
 exec_always feh --bg-fill ~/Pictures/wallpapers/i08wjzD.png
