@@ -18,6 +18,7 @@ Plugin 'https://github.com/tpope/vim-rails.git'
 Plugin 'https://github.com/tpope/vim-bundler.git'
 Plugin 'https://github.com/tpope/vim-fugitive.git'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'rhysd/clever-f.vim'
 "Plugin 'scrooloose/syntastic'
 
 
