@@ -92,3 +92,7 @@ alias blog="cd ~/Projects/Sites/rails/blog"
 alias media="echo 'password is 151150' & ssh yoramfr@192.168.1.13"
 alias vi=vim
 
+
+
+# Vim keys
+# bindkey -v
