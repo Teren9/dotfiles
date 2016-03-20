@@ -87,6 +87,9 @@ source $ZSH/oh-my-zsh.sh
 #export rvm_ignore_gemrc_issues=1
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.gem/ruby/2.3.0/bin"
+
+export VISUAL="vim"
+
 alias sites="cd ~/Projects/Sites"
 alias blog="cd ~/Projects/Sites/rails/blog"
 alias media="echo 'password is 151150' & ssh yoramfr@192.168.1.13"
