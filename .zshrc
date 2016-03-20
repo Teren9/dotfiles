@@ -93,6 +93,8 @@ export VISUAL="vim"
 alias sites="cd ~/Projects/Sites"
 alias blog="cd ~/Projects/Sites/rails/blog"
 alias media="echo 'password is 151150' & ssh yoramfr@192.168.1.13"
+alias rs="rails s -b 0.0.0.0"
+
 alias vi=vim
 
 
