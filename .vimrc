@@ -100,3 +100,21 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+let mapleader = ","
+
+""" SYSTEM CLIPBOARD COPY & PASTE SUPPORT
+
+set pastetoggle=<F2>
+" Copy past to/from clipboard
+vnoremap <C-c> "*y
+map <silent><Leader>p :set paste<CR>o<esc>"*]p:set nopaste<cr>"
+map <silent><Leader><S-p> :set paste<CR>O<esc>"*]p:set nopaste<cr>"
+
+
+noremap <Leader>a $
+noremap <Leader>i ^
+
+
+
+
+
