@@ -75,7 +75,7 @@ set background=dark
 "colorscheme gruvbox
 colorscheme railscasts
 if has("gui_running")
-  set guifont=Monaco\ Regular\ 11
+  set guifont=Monaco\ Regular\ 10
   set guioptions=i
   set mouse=c
 else
