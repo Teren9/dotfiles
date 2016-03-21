@@ -219,7 +219,7 @@ bar {
       i3bar_command i3bar -t
       status_command i3status -c ~/.config/i3status/config
 
-      tray_output primary
+      # tray_output primary
       colors {
           background #000000
           statusline #ffffff
