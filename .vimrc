@@ -19,6 +19,7 @@ Plugin 'https://github.com/tpope/vim-bundler.git'
 Plugin 'https://github.com/tpope/vim-fugitive.git'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'rhysd/clever-f.vim'
+Plugin 'itchyny/lightline.vim'
 "Plugin 'scrooloose/syntastic'
 
 
@@ -85,6 +86,13 @@ end
 map ; :
 imap jj <C-[>
 " Statusline
+
+set laststatus=2
+set noshowmode
+
+let g:lightline = {
+  \ 'colorscheme': 'jellybeans',
+  \ }
 
 " set statusline=%F%m%r%h%w\ 
 " set statusline+=%{fugitive#statusline()}\    
