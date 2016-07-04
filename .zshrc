@@ -88,6 +88,10 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.gem/ruby/2.3.0/bin"
 
+#android-studio
+export PATH="$PATH:$HOME/Android/Sdk/platform-tools"
+
+
 export VISUAL="vim"
 
 alias sites="cd ~/Projects/Sites"
