@@ -20,6 +20,13 @@ Plugin 'https://github.com/tpope/vim-fugitive.git'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'rhysd/clever-f.vim'
 Plugin 'itchyny/lightline.vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'chriskempson/base16-vim'
+
 "Plugin 'scrooloose/syntastic'
 
 
@@ -72,13 +79,16 @@ map <M-Up> [s
 "let g:solarized_termcolors=256
 set t_Co=256
 syntax enable
+" "colorscheme gruvbox
 set background=dark
-"colorscheme gruvbox
-colorscheme railscasts
+colorscheme base16-default-dark
 if has("gui_running")
-  set guifont=Monaco\ Regular\ 10
+  set guifont=DejaVu\ Sans\ Mono\ Regular\ 10
+  " set guifont=Inconsolata\ Regular\ 13
+  " set guifont=Mononoki\ Regular\ 12
+  " set guifont=FantasqueSansMono\ Regular\ 13
   set guioptions=i
-  set mouse=c
+  " set mouse=c
 else
   "colorscheme desert
 end
@@ -121,8 +131,16 @@ map <silent><Leader><S-p> :set paste<CR>O<esc>"*]p:set nopaste<cr>"
 
 noremap <Leader>a $
 noremap <Leader>i ^
+map <Leader>b :call BackgroundToggle()<cr>
 
-
-
-
+" change colorscheme function
+function BackgroundToggle()
+  if (&background=="light")
+    set background=dark
+    colorscheme base16-default-dark
+  else
+    set background=light
+    colorscheme lucius 
+  endif
+endfunction
 
