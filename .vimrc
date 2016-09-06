@@ -54,6 +54,12 @@ endif
 " set expandtab        " expand tabs to spaces
 " wrap lines at 120 chars. 80 is somewaht antiquated with nowadays displays.
 set textwidth=120
+set nowrap
+" set linebreak
+highlight ColorColumn ctermbg=magenta
+set colorcolumn=81
+set cursorline
+
 " turn syntax highlighting on
 " set t_Co=256
 syntax on
@@ -83,15 +89,20 @@ syntax enable
 set background=dark
 colorscheme base16-default-dark
 if has("gui_running")
-  set guifont=DejaVu\ Sans\ Mono\ Regular\ 10
+  set guifont=Code\ New\ Roman\ Regular\ 12
   " set guifont=Inconsolata\ Regular\ 13
   " set guifont=Mononoki\ Regular\ 12
   " set guifont=FantasqueSansMono\ Regular\ 13
   set guioptions=i
   " set mouse=c
 else
-  "colorscheme desert
+  colorscheme gruvbox
 end
+
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 map ; :
 imap jj <C-[>

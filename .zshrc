@@ -54,7 +54,7 @@ plugins=(git ruby colored-man-pages rvm)
 
 # User configuration
 
-  export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/teren/.rvm/bin:$PATH"
+  export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -86,7 +86,7 @@ source $ZSH/oh-my-zsh.sh
 
 #export rvm_ignore_gemrc_issues=1
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.gem/ruby/2.3.0/bin"
+export PATH="$PATH:$HOME/.gem/ruby/2.3.1/bin"
 
 #android-studio
 export PATH="$PATH:$HOME/Android/Sdk/platform-tools"
@@ -101,7 +101,9 @@ alias rs="rails s -b 0.0.0.0"
 
 alias vi=vim
 
-
-
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+base16_default-dark
 # Vim keys
 # bindkey -v
+source ~/.rvm/scripts/rvm
