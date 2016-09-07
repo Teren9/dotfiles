@@ -26,6 +26,8 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'chriskempson/base16-vim'
+Plugin 'jplaut/vim-arduino-ino'
+Plugin 'sudar/vim-arduino-syntax'
 
 "Plugin 'scrooloose/syntastic'
 
