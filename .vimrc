@@ -58,7 +58,7 @@ endif
 set textwidth=120
 set nowrap
 " set linebreak
-highlight ColorColumn ctermbg=magenta
+" highlight ColorColumn ctermbg=magenta
 set colorcolumn=81
 set cursorline
 
@@ -91,7 +91,7 @@ syntax enable
 set background=dark
 colorscheme base16-default-dark
 if has("gui_running")
-  set guifont=Code\ New\ Roman\ Regular\ 12
+  set guifont=CodeNewRoman\ Regular\ 13
   " set guifont=Inconsolata\ Regular\ 13
   " set guifont=Mononoki\ Regular\ 12
   " set guifont=FantasqueSansMono\ Regular\ 13
