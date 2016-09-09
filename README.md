@@ -6,3 +6,16 @@ Use this command:
 ```
 $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
+
+For terminal base16 colors: 
+```
+git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+```
+
+For disabling the 'Caps Lock' key:
+
+Add this command:
+```
+xmodmap ~/.Xmodmap
+```
+To the user startup commands.
