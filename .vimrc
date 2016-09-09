@@ -157,3 +157,4 @@ function BackgroundToggle()
   endif
 endfunction
 
+map <C-P> CtrlPBuffer
