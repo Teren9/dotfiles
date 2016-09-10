@@ -6,6 +6,11 @@ Use this command:
 ```
 $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
+For zsh:
+```
+sudo apt install zsh
+chsh -s $(which zsh)
+```
 
 For terminal base16 colors: 
 ```
