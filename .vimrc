@@ -19,7 +19,10 @@ Plugin 'https://github.com/tpope/vim-bundler.git'
 Plugin 'https://github.com/tpope/vim-fugitive.git'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'rhysd/clever-f.vim'
-Plugin 'itchyny/lightline.vim'
+" Plugin 'itchyny/lightline.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
@@ -28,6 +31,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'chriskempson/base16-vim'
 Plugin 'jplaut/vim-arduino-ino'
 Plugin 'sudar/vim-arduino-syntax'
+Plugin 'Raimondi/delimitMate'
 
 "Plugin 'scrooloose/syntastic'
 
@@ -36,7 +40,7 @@ Plugin 'sudar/vim-arduino-syntax'
 " Up to here
 call vundle#end()            " required
 filetype plugin indent on
-
+set listchars=tab:•\ ,trail:•,extends:»,precedes:«
 set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
@@ -88,10 +92,11 @@ map <M-Up> [s
 set t_Co=256
 syntax enable
 " "colorscheme gruvbox
-set background=dark
-colorscheme base16-default-dark
 if has("gui_running")
-  set guifont=CodeNewRoman\ Regular\ 13
+  "set guifont=CodeNewRoman\ Regular\ 14
+  set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 13
+  colorscheme pencil
+  set background=light
   " set guifont=Inconsolata\ Regular\ 13
   " set guifont=Mononoki\ Regular\ 12
   " set guifont=FantasqueSansMono\ Regular\ 13
@@ -99,6 +104,8 @@ if has("gui_running")
   " set mouse=c
 else
   colorscheme gruvbox
+  set background=dark
+  colorscheme base16-default-dark
 end
 
 if filereadable(expand("~/.vimrc_background"))
@@ -112,15 +119,23 @@ imap jj <C-[>
 
 set laststatus=2
 set noshowmode
+" Airline and Status line config -->
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
-let g:lightline = {
-  \ 'colorscheme': 'jellybeans',
-  \ }
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+" AirlineTheme {light theme}
+" let g:lightline = {
+"   \ 'colorscheme': 'jellybeans',
+"   \ }
 
-" set statusline=%F%m%r%h%w\ 
-" set statusline+=%{fugitive#statusline()}\    
+" set statusline=%F%m%r%h%w\
+" set statusline+=%{fugitive#statusline()}\
 " set statusline+=[%{strlen(&fenc)?&fenc:&enc}]
-" set statusline+=\ [line\ %l\/%L]          
+" set statusline+=\ [line\ %l\/%L]
 " set statusline+=%{rvm#statusline()}
 map <C-n> :NERDTreeToggle<CR>
 
@@ -153,8 +168,10 @@ function BackgroundToggle()
     colorscheme base16-default-dark
   else
     set background=light
-    colorscheme lucius 
+    colorscheme lucius
   endif
 endfunction
 
 map <C-P> CtrlPBuffer
+
+inoremap <C-e> <C-o>a

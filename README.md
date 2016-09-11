@@ -6,6 +6,13 @@ Use this command:
 ```
 $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
+For the vim-airline theme fonts to work:
+```
+git clone https://github.com/powerline/fonts.git
+cd fonts
+./install.sh
+```
+
 For zsh:
 ```
 sudo apt install zsh
