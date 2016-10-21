@@ -30,6 +30,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'chriskempson/base16-vim'
 Plugin 'jplaut/vim-arduino-ino'
+" Plugin 'tclem/vim-arduino'
 Plugin 'sudar/vim-arduino-syntax'
 Plugin 'Raimondi/delimitMate'
 
@@ -50,10 +51,10 @@ set nocompatible
 set autoindent
 set smartindent
 set expandtab
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 if has ("autocmd")
-  filetype indent on
+    filetype indent on
 endif
 " use intelligent indentation for C
 " configure tabwidth and insert spaces instead of tabs
@@ -92,26 +93,32 @@ map <M-Up> [s
 set t_Co=256
 syntax enable
 " "colorscheme gruvbox
-if has("gui_running")
-  "set guifont=CodeNewRoman\ Regular\ 14
-  set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 13
-  colorscheme pencil
-  set background=light
-  " set guifont=Inconsolata\ Regular\ 13
-  " set guifont=Mononoki\ Regular\ 12
-  " set guifont=FantasqueSansMono\ Regular\ 13
-  set guioptions=i
-  " set mouse=c
-else
-  colorscheme gruvbox
-  set background=dark
-  colorscheme base16-default-dark
-end
-
 if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
+    let base16colorspace=256
+    " source ~/.vimrc_background
 endif
+
+if has("gui_running")
+    "set guifont=CodeNewRoman\ Regular\ 14
+    set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline\ 12
+
+    if (strftime("%H") < 19 && strftime("%H") > 5)
+        set background=light
+        " colorscheme pencil
+        colorscheme base16-solarized-light
+    else
+        set background=dark
+        " colorscheme pencil
+        colorscheme base16-chalk
+    endif
+    set guioptions=i
+    " let g:pencil_neutral_code_bg = 1
+    " let g:airline_theme = 'pencil'
+
+    " set mouse=c
+else
+    colorscheme base16-bright
+end
 
 map ; :
 imap jj <C-[>
@@ -124,7 +131,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
 if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
+    let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
 " AirlineTheme {light theme}
@@ -163,15 +170,35 @@ map <Leader>b :call BackgroundToggle()<cr>
 
 " change colorscheme function
 function BackgroundToggle()
-  if (&background=="light")
-    set background=dark
-    colorscheme base16-default-dark
-  else
-    set background=light
-    colorscheme lucius
-  endif
+    if (g:colors_name != 'base16_bright')
+        if (&bg == 'dark')
+            " colorscheme base16-unikitty-light
+            set bg=light
+            colorscheme base16-solarized-light
+        elseif(&bg == 'light')
+            set bg=dark
+            colorscheme base16-chalk
+        endif
+    endif
 endfunction
+
+
+" function BackgroundToggle()
+"   if (g:colors_name == 'base16-chalk')
+"     " colorscheme base16-unikitty-light
+"     colorscheme base16-solarized-light
+"   elseif(g:colors_name == 'base16-solarized-light')
+"     colorscheme base16-chalk
+"   endif
+" endfunction
 
 map <C-P> CtrlPBuffer
 
 inoremap <C-e> <C-o>a
+
+
+" Arduino syntax
+
+au BufRead,BufNewFile *.pde set filetype=arduino
+au BufRead,BufNewFile *.ino set filetype=arduino
+

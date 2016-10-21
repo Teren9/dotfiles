@@ -90,6 +90,9 @@ export PATH="$PATH:$HOME/.gem/ruby/2.3.1/bin"
 
 #android-studio
 export PATH="$PATH:$HOME/Android/Sdk/platform-tools"
+#Go Path
+export GOPATH="$HOME/gopath"
+export PATH="$GOPATH:$GOPATH/bin:$PATH"
 
 
 export VISUAL="vim"
@@ -98,6 +101,7 @@ alias sites="cd ~/Projects/Sites"
 alias blog="cd ~/Projects/Sites/rails/blog"
 alias media="echo 'password is 151150' & ssh yoramfr@192.168.1.13"
 alias rs="rails s -b 0.0.0.0"
+alias nv="nvim"
 
 alias vi=vim
 
@@ -111,9 +115,8 @@ fi
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 # base16_default-dark
+# base16_bright
 base16_bright
 # Vim keys
 # bindkey -v
 source ~/.rvm/scripts/rvm
-
-
